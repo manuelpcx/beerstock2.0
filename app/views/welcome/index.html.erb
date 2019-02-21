@@ -1,0 +1,142 @@
+<header>
+<div class="contenedor" id="inicio">
+  <%= image_tag 'imagen1.jpg'%>
+  <div class="centrado">
+  	<h1 class="display-2">BeerStock</h1>
+  </div>
+</div>
+</header>
+
+<h2 class="display-3">Proceso</h2>
+<div id="services">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 mt-5 mb-5">
+				<div class="card" id="card1" style="width: 18rem;">
+				  <i class="fas fa-shopping-cart fa-4x mt-4"></i>
+				  <div class="card-body">
+				    <h5 class="card-title">Compra</h5>
+				    <p class="card-text">Elije el producto que mas te guste y agregalo al carro de compra.</p>
+			  	</div>
+				</div>
+			</div>
+			<div class="col-md-4 mt-5 mb-5">
+				<div class="card" id="card2" style="width: 18rem;">
+				  <i class="fas fa-credit-card fa-4x mt-4"></i>
+				  <div class="card-body">
+				    <h5 class="card-title">Pago</h5>
+				    <p class="card-text">Luego has el pago del producto elegido.</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-4 mt-5 mb-5">
+				<div class="card" id="card3" style="width: 18rem;">
+				  <i class="fas fa-truck fa-4x mt-4"></i>
+				  <div class="card-body">
+				    <h5 class="card-title">Despacho</h5>
+				    <p class="card-text">Despues de haber echo el pago, solo te queda esperar en la comodidad de tu hogar el producto elegido.</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2 class="display-3 mt-3">Productos</h2>
+<div id="product">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 mt-5 mb-5">
+        <% @product.each do |product| %>
+				<div class="card" id="card1" style="width: 18rem;">
+				  <%= image_tag product.photo %>
+				  <div class="card-body">
+				    <h5 class="card-title"><%= product.name%></h5>
+				    <p class="card-text"><%= product.description%></p>
+            <p>$<%= product.price %></p>
+			  	</div>
+				</div>
+        <% end %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="mt-5" id="contactos">
+	<div class="card text-center">
+  <div class="card-header">
+    <h3 id="contac-h3">Contactos</h3>
+  </div>
+  <div class="card-body">
+  	<ul class="float-left">
+  		<li class="card-text"><span>Email: </span>beerstock2@gmail.com</li>
+  		<li class="card-text"><span>Whatsapp: </span>+569 5555555</li>
+  		<li class="card-text"><span>Facebook: </span>BeerStock_chile</li>
+  	</ul>
+  </div>
+</div>
+
+<script>
+window.sr = ScrollReveal();
+sr.reveal('.navbar', {
+  duration: 2000,
+  origin: 'bottom',
+  reset: false,
+  cleanup: false
+});
+sr.reveal('.centrado', {
+  duration: 2000,
+  origin: 'rigth',
+  distance: '300px'
+});
+sr.reveal('h2', {
+  duration: 2000,
+  origin: 'rigth',
+  distance: '300px'
+});
+sr.reveal('#card1', {
+  duration: 2000,
+  origin: 'left',
+  distance: '300px',
+  delay: 200
+});
+sr.reveal('#card2', {
+  duration: 2000,
+  origin: 'left',
+  distance: '300px',
+  delay: 600
+});
+sr.reveal('#card3', {
+  duration: 2000,
+  origin: 'left',
+  distance: '300px',
+  delay: 1200
+});
+sr.reveal('.centrado', {
+  duration: 2000,
+  origin: 'rigth',
+  distance: '300px'
+});
+sr.reveal('#contac-h3', {
+  duration: 2000,
+  origin: 'top',
+  distance: '300px'
+});
+sr.reveal('footer ul', {
+  duration: 2000,
+  origin: 'bottom',
+  distance: '300px'
+});
+// smoth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+</script>
+
+</footer>
