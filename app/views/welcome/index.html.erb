@@ -7,7 +7,7 @@
 </div>
 </header>
 
-<h2 class="display-3">Proceso</h2>
+<h2 class="display-3 mt-5">Proceso</h2>
 <div id="services">
 	<div class="container">
 		<div class="row">
@@ -54,9 +54,12 @@
 				    <h5 class="card-title"><%= product.name%></h5>
 				    <p class="card-text"><%= product.description%></p>
             <p>$<%= product.price %></p>
+            <%= link_to "Comprar", product_orders_path(product), class:'btn btn-info ml-auto', method: :post%>
 			  	</div>
+
 				</div>
         <% end %>
+
 			</div>
 		</div>
 	</div>
