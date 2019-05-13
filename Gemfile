@@ -10,6 +10,7 @@ gem 'pg', '~> 0.18.4'
 gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'webpacker', require: false
 gem 'rails-erd', require: false, group: :development
+gem 'paypal-sdk-rest'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

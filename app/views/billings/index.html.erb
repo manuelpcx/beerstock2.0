@@ -1,0 +1,9 @@
+<div class="container" style="margin-top: 80px">
+<% @billings.each do |billing| %>
+    <p><%= billing.amount %></p>
+    <hr>
+    <% billing.orders.each do |order| %>
+        <%= order.product.name%>
+    <% end %>
+<% end %>
+</div>
