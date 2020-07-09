@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.2'
 gem 'activeadmin'
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 0.18.4'
-gem 'devise', '~> 4.6', '>= 4.6.1'
+gem 'devise', '~> 4.7'
 gem 'webpacker', require: false
 gem 'rails-erd', require: false, group: :development
 gem 'paypal-sdk-rest'
