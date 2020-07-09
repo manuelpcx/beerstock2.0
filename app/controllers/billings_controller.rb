@@ -62,5 +62,5 @@ before_action :authenticate_user!
         else
             render plain: "No se puedo generar el cobro en PayPal."
         end
-     end
+    end
 end
